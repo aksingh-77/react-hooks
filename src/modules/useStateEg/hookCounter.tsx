@@ -6,7 +6,7 @@ const HookCounter = () => {
 
   return (
     <div className="flex min-h-svh flex-col items-center justify-center">
-      <Button onClick={() => setCount(count + 1)} variant={"secondary"}>
+      <Button onClick={() => setCount(count + 1)} variant="outline" size="lg">
         Count {count}
       </Button>
     </div>
