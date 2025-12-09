@@ -1,13 +1,21 @@
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import AppSideBar from "../appSideBar/appSideBar";
+
 const Home = () => {
   return (
-    <div className="flex">
-      <div className="sidebar">ksdksfjdlf</div>
-      <div className="flex flex-col">
-        <div className="navBar">skjdk</div>
-        <div className="content">kjsdf</div>
-        <div className="footer">ksjdfkjs</div>
+    <SidebarProvider>
+      <div className="flex">
+        <AppSideBar />
+        <main>
+          <SidebarTrigger />
+        </main>
+        <div className="flex flex-col">
+          <div className="navBar">skjdk</div>
+          <div className="content">kjsdf</div>
+          <div className="footer">ksjdfkjs</div>
+        </div>
       </div>
-    </div>
+    </SidebarProvider>
   );
 };
 
