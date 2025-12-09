@@ -1,8 +1,8 @@
 import "./App.css";
-import HookCounter from "./modules/useStateEg/hookCounter";
+import Home from "./modules/home/home";
 
 function App() {
-  return <HookCounter />;
+  return <Home />;
 }
 
 export default App;
