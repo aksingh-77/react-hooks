@@ -1,27 +1,25 @@
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
 
 const AppSideBar = () => {
   const items = [
     {
-      title: "Home",
-      url: "#",
+      title: "useState",
+      url: "/useState",
       icon: Home,
     },
     {
-      title: "Inbox",
-      url: "#",
+      title: "useEffect",
+      url: "/useEffect",
       icon: Inbox,
     },
     {
@@ -61,9 +59,6 @@ const AppSideBar = () => {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-      <SidebarFooter>
-        <SidebarTrigger />
-      </SidebarFooter>
     </Sidebar>
   );
 };
