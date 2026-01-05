@@ -1,9 +1,9 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import AppSideBar from "../appSideBar/appSideBar";
 import { Separator } from "@/components/ui/separator";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import AppSideBar from "@/modules/appSideBar/appSideBar";
 import { Outlet } from "react-router-dom";
 
-const Home = () => {
+const AppLayout = () => {
   return (
     <SidebarProvider>
       <div className="flex">
@@ -12,7 +12,6 @@ const Home = () => {
           <div className="flex align-middle gap-1">
             <SidebarTrigger />
             <Separator orientation="vertical" />
-            <h1>Document</h1>
           </div>
           <div>
             <Outlet />
@@ -23,4 +22,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default AppLayout;
