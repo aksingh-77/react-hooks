@@ -1,10 +1,10 @@
 import AppLayout from "@/layouts/appLayout";
-import DashboardPage from "@/modules/dashboard/pages/dashboard.page";
-import HookCounter from "@/modules/hooksExamples/useStateEg/hookCounter";
+import SideEffectHook from "@/modules/hooksConcept/lifeCycleHook/sideEffect.hook";
+import StateMgmtHooks from "@/modules/hooksConcept/stateMgtHook/state.hook";
 import type { FC } from "react";
 import type { RouteObject } from "react-router-dom";
 
-export const Paths = ["/", "/dashboard", "/useState"] as const;
+export const Paths = ["/", "/useState", "/useEffect"] as const;
 
 export type Path = (typeof Paths)[number];
 
@@ -18,5 +18,5 @@ const r = (
 });
 
 export const AppRoutes: RouteObject[] = [
-  r(AppLayout, [r(DashboardPage, "/"), r(HookCounter, "/useState")]),
+  r(AppLayout, [r(StateMgmtHooks, "/"), r(SideEffectHook, "/useEffect")]),
 ];

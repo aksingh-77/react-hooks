@@ -8,34 +8,30 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import type { Path } from "@/configs/routes/app.routes";
+import type { ReactNode } from "react";
 
 const AppSideBar = () => {
-  const items = [
+  const items: { title: string; url: Path; icon?: ReactNode }[] = [
     {
       title: "useState",
       url: "/useState",
-      icon: Home,
     },
     {
       title: "useEffect",
       url: "/useEffect",
-      icon: Inbox,
     },
     {
       title: "Calendar",
-      url: "#",
-      icon: Calendar,
+      url: "/",
     },
     {
       title: "Search",
-      url: "#",
-      icon: Search,
+      url: "/",
     },
     {
       title: "Settings",
-      url: "#",
-      icon: Settings,
+      url: "/",
     },
   ];
   return (
@@ -45,11 +41,10 @@ const AppSideBar = () => {
           <SidebarGroupLabel>Hooks</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map((item) => (
+              {items?.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <a href={item.url}>
-                      <item.icon />
                       <span>{item.title}</span>
                     </a>
                   </SidebarMenuButton>
