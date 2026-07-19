@@ -33,6 +33,7 @@ const AppSideBar = () => {
       title: "Settings",
       url: "/",
     },
+    { title: "useContext", url: "/useContext" },
   ];
   return (
     <Sidebar>

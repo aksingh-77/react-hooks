@@ -1,16 +1,17 @@
 import AppLayout from "@/layouts/appLayout";
+import ContextHookPage from "@/modules/contextHook/contextHook.page";
 import SideEffectHook from "@/modules/hooksConcept/lifeCycleHook/sideEffect.hook";
 import StateMgmtHooks from "@/modules/hooksConcept/stateMgtHook/state.hook";
 import type { FC } from "react";
 import type { RouteObject } from "react-router-dom";
 
-export const Paths = ["/", "/useState", "/useEffect"] as const;
+export const Paths = ["/", "/useState", "/useEffect", "/useContext"] as const;
 
 export type Path = (typeof Paths)[number];
 
 const r = (
   Component: FC,
-  extra: Path | undefined | "*" | RouteObject[] = undefined
+  extra: Path | undefined | "*" | RouteObject[] = undefined,
 ): RouteObject => ({
   path: typeof extra === "string" ? extra : undefined,
   Component,
@@ -18,5 +19,9 @@ const r = (
 });
 
 export const AppRoutes: RouteObject[] = [
-  r(AppLayout, [r(StateMgmtHooks, "/"), r(SideEffectHook, "/useEffect")]),
+  r(AppLayout, [
+    r(StateMgmtHooks, "/"),
+    r(SideEffectHook, "/useEffect"),
+    r(ContextHookPage, "/useContext"),
+  ]),
 ];
