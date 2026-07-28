@@ -1,8 +1,9 @@
 import AppLayout from "@/layouts/appLayout";
-import ContextHookPage from "@/modules/contextHook/contextHook.page";
+// import ContextHookPage from "@/modules/contextHook/contextHook.page";
 import SideEffectHook from "@/modules/hooksConcept/lifeCycleHook/sideEffect.hook";
 import StateMgmtHooks from "@/modules/hooksConcept/stateMgtHook/state.hook";
 import ReducerHookPage from "@/modules/reducerHook/reducerHook.page";
+import { ContextHookPage } from "@/modules/selfContextHooks/contextHook.page";
 import type { FC } from "react";
 import type { RouteObject } from "react-router-dom";
 
