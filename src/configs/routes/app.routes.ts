@@ -3,6 +3,7 @@ import AppLayout from "@/layouts/appLayout";
 import SideEffectHook from "@/modules/hooksConcept/lifeCycleHook/sideEffect.hook";
 import StateMgmtHooks from "@/modules/hooksConcept/stateMgtHook/state.hook";
 import ReducerHookPage from "@/modules/reducerHook/reducerHook.page";
+import SimpleReducerHook from "@/modules/reducerHook/simpleReducerHook.page";
 import { ContextHookPage } from "@/modules/selfContextHooks/contextHook.page";
 import type { FC } from "react";
 import type { RouteObject } from "react-router-dom";
@@ -13,6 +14,7 @@ export const Paths = [
   "/useEffect",
   "/useContext",
   "/useReducer",
+  "/simpleReducer",
 ] as const;
 
 export type Path = (typeof Paths)[number];
@@ -32,5 +34,6 @@ export const AppRoutes: RouteObject[] = [
     r(SideEffectHook, "/useEffect"),
     r(ContextHookPage, "/useContext"),
     r(ReducerHookPage, "/useReducer"),
+    r(SimpleReducerHook, "/simpleReducer"),
   ]),
 ];

@@ -35,6 +35,7 @@ const AppSideBar = () => {
     },
     { title: "useContext", url: "/useContext" },
     { title: "useReducer", url: "/useReducer" },
+    { title: "Simple use Reducer", url: "/simpleReducer" },
   ];
   return (
     <Sidebar>
